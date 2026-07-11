@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Request Conditions",
+  "version": "0.1.0",
+  "description": "Control, block, redirect, and modify browser requests on selected domains.",
+  "permissions": ["storage", "declarativeNetRequest"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Request Conditions"
+  }
+}

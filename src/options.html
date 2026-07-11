@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Request Conditions - Settings</title>
+<link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <h1>Request Conditions</h1>
+
+  <section id="activationSection">
+    <h2>Activation domains</h2>
+    <p class="hint">One domain per line. No rule applies outside these domains. Subdomains are covered automatically.</p>
+    <textarea id="activationDomains" rows="4" placeholder="example.com&#10;dev.example.com"></textarea>
+    <p class="hint" id="activationCount">0 domains</p>
+  </section>
+
+  <section id="rulesSection">
+    <h2>Rules</h2>
+    <p class="hint" id="rulesCount">0 / 5000 rules</p>
+    <div id="rulesList"></div>
+    <button id="addRule">+ Add rule</button>
+  </section>
+
+  <section id="exportSection">
+    <h2>Export / Import</h2>
+    <button id="exportBtn">Export JSON</button>
+    <button id="importBtn">Import JSON</button>
+    <input type="file" id="importFile" accept="application/json" style="display:none">
+  </section>
+
+  <div id="saveBar">
+    <button id="save">Save</button>
+    <span id="status"></span>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="options-state.js"></script>
+  <script src="options-render.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
